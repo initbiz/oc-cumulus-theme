@@ -1,0 +1,10 @@
+{% if not user %}
+    {% partial __SELF__ ~ '::signin' %}
+{% else %}
+<script>
+    $(document).ready(function() {
+        $('#loginContainer').delay(300).addClass('slideOutLeft');
+        $.request('onRedirectMe');
+    });
+</script>
+{% endif %}

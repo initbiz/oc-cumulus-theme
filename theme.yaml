@@ -1,0 +1,12 @@
+name: "Cumulus theme"
+description: 'Theme using Cumulus plugin'
+author: 'Initbiz'
+homepage: 'http://init.biz'
+code: cumulus
+form: config/fields.yaml
+require:
+    - RainLab.Notify
+    - RainLab.User
+    - RainLab.Location
+    - RainLab.Userplus
+    - Initbiz.Cumuluscore

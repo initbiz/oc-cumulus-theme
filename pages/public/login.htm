@@ -1,0 +1,64 @@
+title = "Login"
+url = "/"
+layout = "public/login"
+is_hidden = 0
+
+[account formlogin]
+redirect = "system/choose-cluster"
+paramCode = "code"
+forceSecure = 0
+==
+<div class="alert alert-danger" style="display: none;position: absolute;width: 100%;">
+</div>
+<div id="loginContainer" class="vertical-center animated">
+    <div class="logo">
+        {% if this.theme.website_logo %}
+            <img src="{{this.theme.website_logo.path}}" alt="">
+        {% else %}
+            <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+        {% endif %}
+    </div>
+    <div class="brand">
+        <h1>{{this.theme.website_name?this.theme.website_name:"Cumulus"}}</h1>
+        <small>{{this.theme.website_description?this.theme.website_description:"There are always clouds in October"}}</small>
+    </div>
+    <div class="form">
+        {% component 'formlogin' %}
+    </div>
+    <div class="signinButton">
+        <span class="glyphicon glyphicon-menu-right animated" aria-hidden="true"></span>
+    </div>
+</div>
+
+{% put scripts %}
+<script>
+    $('.glyphicon-menu-right').hover(
+        function () {
+            $(this).addClass('shake');
+        },
+        function () {
+            $(this).removeClass('shake');
+        }
+    ).click(function () {
+        submitLoginForm();
+    });
+
+    $('#loginForm').keypress(function (e) {
+        if (e.which == 13) {
+            submitLoginForm();
+            return false;
+        }
+    });
+
+    function submitLoginForm() {
+        $('#loginForm').submit();
+        $('#loginContainer').addClass('slideOutLeft');
+    }
+
+    $(window).on('ajaxErrorMessage', function(event, message){
+        $('#loginContainer').removeClass('slideOutLeft').addClass('slideInLeft');
+        $('.alert-danger').html(message).slideDown(300).delay(3000).slideUp(300);
+        event.preventDefault();
+    })
+</script>
+{% endput %}

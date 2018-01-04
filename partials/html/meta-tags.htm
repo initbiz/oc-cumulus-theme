@@ -1,0 +1,26 @@
+description = "Meta tags for all pages"
+==
+    <meta charset="utf-8">
+    <meta name="author" content="{{ this.theme.website_author }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{{ this.theme.website_favicon.path }}" />
+
+    {% set stylefiles = [
+        'assets/css/bootstrap.min.css',
+        'assets/css/animate.min.css',
+        'assets/css/font-awesome.min.css'
+    ] %}
+
+    {% set scriptfiles = [
+    ] %}
+
+    {# Combined style files from stylefiles array #}
+    <link rel="stylesheet" type="text/css" href="{{ stylefiles |theme }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ ['assets/scss/style.scss'] |theme }}">
+
+    <script src="{{ ['@jquery'] |theme }}"></script>
+
+    {# Combined script files from scriptfiles array #}
+    <script src="{{ scriptfiles |theme }}"></script>

@@ -1,0 +1,11 @@
+title = "Profile"
+url = "/profile"
+layout = "session-guarded/default"
+is_hidden = 0
+
+[account profilemanage]
+redirect = "system/cluster-dashboard"
+paramCode = "code"
+forceSecure = 0
+==
+{% component 'profilemanage' %}

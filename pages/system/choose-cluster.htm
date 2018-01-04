@@ -1,0 +1,17 @@
+title = "Choose cluster"
+url = "/choose-cluster"
+layout = "session-guarded/default"
+is_hidden = 0
+
+[clustersList cClustersList]
+clusterDashboardPage = "system/cluster-dashboard"
+
+[menuItem]
+menuItemTitle = "Choose cluster"
+cumulusModule = "none"
+==
+<div class="text-center">
+    <h1>Choose cluster</h1>
+    <hr>
+</div>
+{% component 'cClustersList' %}

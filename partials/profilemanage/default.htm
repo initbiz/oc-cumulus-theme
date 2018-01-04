@@ -1,0 +1,13 @@
+{% if not user %}
+
+  //TODO: redirect login
+    <!--TODO redirect login-->
+
+{% else %}
+    <div class="row">
+        <h2>Edit profile</h2>
+    </div>
+    <div class="row">
+        {% partial __SELF__ ~ '::update' %}
+    </div>
+{% endif %}

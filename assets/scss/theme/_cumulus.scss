@@ -1,0 +1,112 @@
+body {
+    font-family: Raleway;
+}
+a:hover {
+    text-decoration: none;
+}
+.panel-body {
+    background-color: #3e3f3a;
+    height: 170px;
+}
+.panel-body h2 {
+    color: #fff;
+}
+
+.panel-body img {
+    max-height: 160px;
+    width: auto;
+    margin: auto;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.sidenav {
+     border-right: 1px solid #ddd;
+}
+
+footer {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px auto 0px auto;
+}
+
+.login {
+    .vertical-center {
+        padding: 0;
+        margin: 0;
+        min-height: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    .glyphicon-cloud {
+        padding-left: 100px;
+        padding-right: 25px;
+        color: #2980b9;
+    }
+
+    .logo img {
+        max-width: 300px;
+        margin-left:100px;
+    }
+
+    .brand h1 {
+        letter-spacing: 8px;
+    }
+    .form {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-left: 20px;
+        padding-right: 0;
+        height: 300px;
+        margin: 0 20px;
+        border-left: 1px solid rgba(41, 128, 185, 0.17);
+    }
+    input {
+        color: rgba(41, 128, 185, 0.5);
+        font-size: 15px;
+        border: none;
+        border-radius: 0;
+        height: 60px;
+        width: 300px;
+    }
+    input:focus {
+        outline: none !important;
+        border: none;
+        border-radius: 0;
+    }
+    input::-webkit-input-placeholder {
+        color: rgba(41, 128, 185, 0.5);
+        font-size: 20px;
+    }
+    .signinButton {
+        padding-top: 65px;
+        cursor: pointer;
+        display: inline-block;
+        color: rgba(41, 128, 185, 0.05);
+        font-size: 200px;
+        font-weight: 100;
+    }
+    .signinButton:hover {
+        color: rgba(41, 128, 185, 0.2);
+    }
+    /* Change the white to any color ;) */
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+    .glyphicon-cloud {
+        font-size: 200px;
+    }
+    .stripe-loading-indicator .stripe, .stripe-loading-indicator .stripe-loaded {
+        background: #2980b9;
+    }
+    .alert {
+        border-radius: 0;
+        text-align: center;
+        font-weight: bold;
+    }
+
+}

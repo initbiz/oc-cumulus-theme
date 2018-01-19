@@ -1,5 +1,6 @@
 body {
     font-family: Raleway;
+    margin-bottom:50px;
 }
 a:hover {
     text-decoration: none;
@@ -30,7 +31,13 @@ footer {
     position:fixed;
     bottom: 0;
     width: 100%;
-    padding: 20px auto 0px auto;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px auto;
 }
 
 .login {

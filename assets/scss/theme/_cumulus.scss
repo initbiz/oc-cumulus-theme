@@ -35,9 +35,21 @@ footer {
     border-top: 1px solid #ddd;
     text-align: center;
 }
-
 footer p {
     margin: 10px auto;
+}
+
+#flashbox {
+    z-index: 1000;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+}
+
+#flashbox .content {
+    opacity: 0.70;
+    width: 60%;
+    margin: auto;
 }
 
 .login {
@@ -49,10 +61,12 @@ footer p {
         display: flex;
         align-items: center;
     }
-    .glyphicon-cloud {
+
+    .fa-cloud {
         padding-left: 100px;
         padding-right: 25px;
         color: #2980b9;
+        font-size: 200px;
     }
 
     .logo img {
@@ -63,6 +77,7 @@ footer p {
     .brand h1 {
         letter-spacing: 8px;
     }
+
     .form {
         padding-top: 100px;
         padding-bottom: 100px;
@@ -72,6 +87,7 @@ footer p {
         margin: 0 20px;
         border-left: 1px solid rgba(41, 128, 185, 0.17);
     }
+
     input {
         color: rgba(41, 128, 185, 0.5);
         font-size: 15px;
@@ -80,36 +96,40 @@ footer p {
         height: 60px;
         width: 300px;
     }
+
     input:focus {
         outline: none !important;
         border: none;
         border-radius: 0;
     }
+
     input::-webkit-input-placeholder {
         color: rgba(41, 128, 185, 0.5);
         font-size: 20px;
     }
+
     .signinButton {
-        padding-top: 65px;
+        padding-top: 30px;
         cursor: pointer;
         display: inline-block;
         color: rgba(41, 128, 185, 0.05);
         font-size: 200px;
         font-weight: 100;
     }
+
     .signinButton:hover {
         color: rgba(41, 128, 185, 0.2);
     }
+
     /* Change the white to any color ;) */
     input:-webkit-autofill {
         -webkit-box-shadow: 0 0 0px 1000px white inset;
     }
-    .glyphicon-cloud {
-        font-size: 200px;
-    }
+
     .stripe-loading-indicator .stripe, .stripe-loading-indicator .stripe-loaded {
         background: #2980b9;
     }
+
     .alert {
         border-radius: 0;
         text-align: center;

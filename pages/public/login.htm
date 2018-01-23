@@ -15,7 +15,7 @@ forceSecure = 0
         {% if this.theme.website_logo %}
             <img src="{{this.theme.website_logo.path}}" alt="">
         {% else %}
-            <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+            <span class="fas fa-cloud" aria-hidden="true"></span>
         {% endif %}
     </div>
     <div class="brand">
@@ -26,13 +26,13 @@ forceSecure = 0
         {% component 'formlogin' %}
     </div>
     <div class="signinButton">
-        <span class="glyphicon glyphicon-menu-right animated" aria-hidden="true"></span>
+        <span class="fas fa-caret-right animated" aria-hidden="true"></span>
     </div>
 </div>
 
 {% put scripts %}
 <script>
-    $('.glyphicon-menu-right').hover(
+    $('.fa-caret-right').hover(
         function () {
             $(this).addClass('shake');
         },

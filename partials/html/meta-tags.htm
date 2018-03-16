@@ -9,7 +9,9 @@ description = "Meta tags for all pages"
 
     {% set stylefiles = [
         'assets/css/bootstrap.css',
-        'assets/css/animate.min.css'
+        'assets/css/animate.min.css',
+        'assets/css/fontawesome-all.css',
+        'assets/scss/style.scss'
     ] %}
 
     {% set scriptfiles = [
@@ -18,8 +20,8 @@ description = "Meta tags for all pages"
     {# Combined style files from stylefiles array #}
     <link rel="stylesheet" type="text/css" href="{{ stylefiles |theme }}">
 
-    <link rel="stylesheet" type="text/css" href="{{ ['assets/scss/style.scss'] |theme }}">
-
+    {% styles %}
+    
     <script src="{{ ['@jquery'] |theme }}"></script>
 
     {# Combined script files from scriptfiles array #}

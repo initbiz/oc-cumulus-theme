@@ -3,11 +3,7 @@ url = "/:cluster/dashboard"
 layout = "cumulus-guarded/default"
 is_hidden = 0
 
-[clusterDashboard]
-clusterSlug = "{{ :cluster }}"
-
 [menuItem]
 menuItemTitle = "Dashboard"
 cumulusModule = "none"
 ==
-{% component 'clusterDashboard' %}

@@ -1,9 +1,9 @@
-title = "Login"
-url = "/"
+title = "Register"
+url = "/register"
 layout = "public/default"
 is_hidden = 0
 
-[account loginform]
+[account registerform]
 redirect = "system/choose-cluster"
 paramCode = "code"
 forceSecure = 0
@@ -12,7 +12,7 @@ forceSecure = 0
 </div>
 <div class="container">
     <div class="row">
-        <div id="login-container" class="animated col-md-12">
+        <div id="register-container" class="animated col-md-12">
             <div class="logo col-sm-6 col-md-3">
                 {% if this.theme.website_logo %}
                     <img src="{{this.theme.website_logo.path}}" alt="">
@@ -25,7 +25,7 @@ forceSecure = 0
                 <small>{{this.theme.website_description?this.theme.website_description:"There are always clouds in October"}}</small>
             </div>
             <div class="form col-sm-8 col-md-4">
-                {% component 'loginform' %}
+                {% component 'registerform' %}
             </div>
             <div class="signinButton col-sm-4 col-md-2">
                 <span class="fas fa-caret-right animated" aria-hidden="true"></span>
@@ -34,7 +34,7 @@ forceSecure = 0
         <div class="col-md-12 text-center">
             <p>
                 <small>
-                    <a href="/register">{{'login.go_to_register_page' |_}}</a>
+                    <a href="/">{{'register.go_to_login_page' |_}}</a>
                 </small>
             </p>
         </div>
@@ -51,24 +51,24 @@ forceSecure = 0
             $(this).removeClass('shake');
         }
     ).click(function () {
-        submitLoginForm();
+        submitRegisterForm();
     });
 
-    var loginform = $('#login-container').find('form');
-    loginform.keypress(function (e) {
+    var registerform = $('#register-container').find('form');
+    registerform.keypress(function (e) {
         if (e.which == 13) {
-            submitLoginForm();
+            submitRegisterForm();
             return false;
         }
     });
 
-    function submitLoginForm() {
-        loginform.submit();
-        $('#login-container').addClass('slideOutLeft');
+    function submitRegisterForm() {
+        registerform.submit();
+        $('#register-container').addClass('slideOutLeft');
     }
 
-    loginform.on('ajaxError', function(event, context, data) {
-        $('#login-container').removeClass('slideOutLeft').addClass('slideInLeft');
+    registerform.on('ajaxError', function(event, context, data) {
+        $('#register-container').removeClass('slideOutLeft').addClass('slideInLeft');
         var data = jQuery.parseJSON(data);
         var message = jQuery.parseJSON(data.message);
         $('.alert-danger').html(

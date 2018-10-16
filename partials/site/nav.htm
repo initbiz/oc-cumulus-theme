@@ -2,36 +2,45 @@
 ==
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-            <a class="navbar-brand" href="{{'public/login'|page}}">
-                {% if this.theme.website_logo %}
-                    <img src="{{this.theme.website_logo}}" alt="">
-                {% else %}
-                    <span class="fas fa-cloud" aria-hidden="true"></span>
-                {% endif %}
-                {{this.theme.website_name?this.theme.website_name:"Cumulus"}}
-            </a>
-
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2toggle" aria-controls="navbar2toggle" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbar2toggle">
-    <ul class="navbar-nav ml-auto">
-        {% if user %}
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ user.name }}</a>
-                <div class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="{{'system/profile' |page}}">Profile</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#" data-request="onLogout" data-request-data="redirect: '{{'public/login'|page}}'">Logout</a>
-                </div>
-            </li>
+    <a class="navbar-brand" href="{{'public/login'|page}}">
+        {% if this.theme.website_logo %}
+            <img src="{{this.theme.website_logo}}" alt="">
         {% else %}
-            <li class="nav-item"><a href="/">Log in</a></li>
+            <span class="fas fa-cloud" aria-hidden="true"></span>
         {% endif %}
-    </ul>
-  </div>
+        {{this.theme.website_name?this.theme.website_name:"Cumulus"}}
+    </a>
+
+
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar2toggle"
+        aria-controls="navbar2toggle"
+        aria-expanded="false"
+        aria-label="{{'nav.toggle_navigation' |_}}">
+            <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar2toggle">
+        <ul class="navbar-nav ml-auto">
+            {% if user %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ user.name }}</a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="{{'system/profile' |page}}">
+                            {{'nav.profile_page' |_}}
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" data-request="onLogout" data-request-data="redirect: '{{'public/login'|page}}'">
+                            {{'nav.logout' |_}}
+                        </a>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
 </nav>
 
 <!-- <nav class="navbar navbar-default">

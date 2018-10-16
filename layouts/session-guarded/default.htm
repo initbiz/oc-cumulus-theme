@@ -3,9 +3,12 @@ description = "Default layout for pages that need only being logged in"
 [session]
 security = "user"
 redirect = "public/login"
+
+[localePicker]
+forceUrl = 0
 ==
 <!DOCTYPE html>
-<html>
+<html lang="{{activeLocale}}">
 <head>
     <title>{{this.theme.website_name}}</title>
     {% partial 'html/meta-tags' %}

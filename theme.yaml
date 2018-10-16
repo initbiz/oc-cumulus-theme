@@ -4,9 +4,11 @@ author: 'Initbiz'
 homepage: 'http://init.biz'
 code: cumulus
 form: config/fields.yaml
+translate: config/lang.yaml
 require:
     - RainLab.Notify
     - RainLab.User
     - RainLab.Location
     - RainLab.Userplus
+    - RainLab.Translate
     - Initbiz.Cumuluscore

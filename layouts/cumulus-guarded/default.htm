@@ -5,9 +5,13 @@ security = "user"
 redirect = "public/login"
 
 [cumulusGuard]
+clusterSlug = "{{ :cluster }}"
+
+[localePicker]
+forceUrl = 0
 ==
 <!DOCTYPE html>
-<html>
+<html lang="{{activeLocale}}">
 <head>
     <title>{{this.theme.website_name}}</title>
     {% partial 'html/meta-tags' %}

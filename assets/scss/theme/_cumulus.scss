@@ -52,18 +52,12 @@ footer p {
     margin: auto;
 }
 
-.login {
-    .vertical-center {
-        padding: 0;
-        margin: 0;
-        min-height: 100%;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-    }
+#login-container, #register-container {
+    margin-top:100px;
+    display: flex;
+    align-items: center;
 
     .fa-cloud {
-        padding-left: 100px;
         padding-right: 25px;
         color: #2980b9;
         font-size: 200px;
@@ -71,7 +65,6 @@ footer p {
 
     .logo img {
         max-width: 300px;
-        margin-left:100px;
     }
 
     .brand h1 {

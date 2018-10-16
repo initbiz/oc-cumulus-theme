@@ -1,5 +1,6 @@
 description = "Meta tags for all pages"
 ==
+    <title>{{this.theme.website_name}} | {{this.page.title|_}}</title>
     <meta charset="utf-8">
     <meta name="author" content="{{ this.theme.website_author }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +22,7 @@ description = "Meta tags for all pages"
     <link rel="stylesheet" type="text/css" href="{{ stylefiles |theme }}">
 
     {% styles %}
-    
+
     <script src="{{ ['@jquery'] |theme }}"></script>
 
     {# Combined script files from scriptfiles array #}

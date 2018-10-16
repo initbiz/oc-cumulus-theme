@@ -1,0 +1,7 @@
+{% if __SELF__.menuItems %}
+<nav class="d-none d-md-block bg-light sidebar">
+    <ul class="nav">
+        {% partial __SELF__ ~ "::items" items=__SELF__.menuItems %}
+    </ul>
+</nav>
+{% endif %}

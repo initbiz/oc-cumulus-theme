@@ -13,11 +13,13 @@ forceUrl = 0
 [featureGuard]
 clusterSlug = "{{ :cluster }}"
 cumulusFeatures[] = "initbiz.cumulusdemo.paid_feature"
+
+[staticMenu]
+code = "example-menu"
 ==
 <!DOCTYPE html>
 <html lang="{{activeLocale}}">
 <head>
-    <title>{{this.theme.website_name}}</title>
     {% partial 'html/meta-tags' %}
 </head>
 <body>
@@ -27,7 +29,7 @@ cumulusFeatures[] = "initbiz.cumulusdemo.paid_feature"
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3 sidenav">
-                {% partial 'cmenu/menu' cluster=cluster %}
+                {% component 'staticMenu' %}
             </div>
             <div class="col-md-9">
                 {% page %}

@@ -29,6 +29,8 @@ en:
     profile_update.password: 'New password'
     profile_update.password_confirm: 'Confirm new password'
     profile_update.save_button: 'Save'
+    error.403_header: 'SORRY!'
+    error.403_content: 'You do not have access to this content.'
     error.404_header: 'SORRY!'
     error.404_content: 'The page you’re looking for was not found.'
     error.500_header: 'SORRY!'

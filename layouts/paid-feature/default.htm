@@ -1,0 +1,40 @@
+description = "Default layout for pages that need access to paid feature"
+
+[session]
+security = "user"
+redirect = "public/login"
+
+[cumulusGuard]
+clusterSlug = "{{ :cluster }}"
+
+[localePicker]
+forceUrl = 0
+
+[featureGuard]
+clusterSlug = "{{ :cluster }}"
+cumulusFeatures[] = "initbiz.cumulusdemo.paid_feature"
+==
+<!DOCTYPE html>
+<html lang="{{activeLocale}}">
+<head>
+    <title>{{this.theme.website_name}}</title>
+    {% partial 'html/meta-tags' %}
+</head>
+<body>
+    {% partial 'flashbox' %}
+    {% partial 'site/nav' %}
+    <!-- Page Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 sidenav">
+                {% partial 'cmenu/menu' cluster=cluster %}
+            </div>
+            <div class="col-md-9">
+                {% page %}
+            </div>
+        </div>
+    </div>
+    {% partial 'site/footer' %}
+    {% partial 'html/footer-scripts' %}
+</body>
+</html>

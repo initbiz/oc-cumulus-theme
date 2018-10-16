@@ -54,7 +54,6 @@ footer p {
 
 #login-container, #register-container {
     margin-top:100px;
-    display: flex;
     align-items: center;
 
     .fa-cloud {
@@ -104,14 +103,13 @@ footer p {
     .signinButton {
         padding-top: 30px;
         cursor: pointer;
-        display: inline-block;
-        color: rgba(41, 128, 185, 0.05);
+        color: rgba(41, 128, 185, 0.2);
         font-size: 200px;
         font-weight: 100;
     }
 
     .signinButton:hover {
-        color: rgba(41, 128, 185, 0.2);
+        color: rgba(41, 128, 185, 0.5);
     }
 
     /* Change the white to any color ;) */

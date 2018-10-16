@@ -38,3 +38,4 @@ en:
     maintenance.subheader: 'Service is temporarily unavailable.'
     maintenance.content: 'We are currently working on deploying new features. We will be back soon :)'
     choosecluster.header: 'Choose cluster'
+    dashboard.welcome_message: 'Good to see you'

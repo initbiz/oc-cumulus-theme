@@ -5,5 +5,9 @@ is_hidden = 0
 
 [menuItem]
 menuItemTitle = "Dashboard"
-cumulusModule = "none"
 ==
+<h2>
+     {% if user.name %}
+         {{'dashboard.welcome_message' |_}}{{", " ~ user.name}}!
+     {% endif %}
+</h2>

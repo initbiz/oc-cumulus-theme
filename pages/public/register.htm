@@ -11,25 +11,23 @@ forceSecure = 0
 <div class="alert alert-danger" style="display: none;position: absolute;width: 100%;">
 </div>
 <div class="container">
-    <div class="row">
-        <div id="register-container" class="animated col-md-12">
-            <div class="logo col-sm-6 col-md-3">
-                {% if this.theme.website_logo %}
-                    <img src="{{this.theme.website_logo.path}}" alt="">
-                {% else %}
-                    <span class="fas fa-cloud" aria-hidden="true"></span>
-                {% endif %}
-            </div>
-            <div class="brand col-sm-6 col-md-3">
-                <h1>{{this.theme.website_name?this.theme.website_name:"Cumulus"}}</h1>
-                <small>{{this.theme.website_description?this.theme.website_description:"There are always clouds in October"}}</small>
-            </div>
-            <div class="form col-sm-8 col-md-4">
-                {% component 'registerform' %}
-            </div>
-            <div class="signinButton col-sm-4 col-md-2">
-                <span class="fas fa-caret-right animated" aria-hidden="true"></span>
-            </div>
+    <div id="register-container" class="animated row">
+        <div class="logo col-6 col-md-3">
+            {% if this.theme.website_logo %}
+                <img src="{{this.theme.website_logo.path}}" alt="">
+            {% else %}
+                <span class="fas fa-cloud" aria-hidden="true"></span>
+            {% endif %}
+        </div>
+        <div class="brand col-6 col-md-3">
+            <h1>{{this.theme.website_name?this.theme.website_name:"Cumulus"}}</h1>
+            <small>{{this.theme.website_description?this.theme.website_description:"There are always clouds in October"}}</small>
+        </div>
+        <div class="form col-8 col-md-4">
+            {% component 'registerform' %}
+        </div>
+        <div class="signinButton col-3 col-md-1">
+            <span class="fas fa-caret-right animated" aria-hidden="true"></span>
         </div>
         <div class="col-md-12 text-center">
             <p>

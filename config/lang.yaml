@@ -9,6 +9,7 @@ en:
     register.register_failed: 'Sorry! Your account has not been created'
     register.name_placeholder: 'Enter your full name'
     register.email_placeholder: 'Enter your e-mail address'
+    register.cluster_placeholder: 'Enter your cluster name'
     register.password_placeholder: 'Choose a password'
     register.register_button: 'Register'
     register.go_to_login_page: 'Go to login page'

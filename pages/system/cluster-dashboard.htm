@@ -3,8 +3,14 @@ url = "/:cluster/dashboard"
 layout = "cumulus-guarded/default"
 is_hidden = 0
 ==
-<h2>
-     {% if user.name %}
-         {{'dashboard.welcome_message' |_}}{{", " ~ user.name}}!
-     {% endif %}
-</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <h2>
+                {% if user.name %}
+                    {{'dashboard.welcome_message' |_}}{{", " ~ user.name}}!
+                {% endif %}
+            </h2>
+        </div>
+    </div>
+</div>

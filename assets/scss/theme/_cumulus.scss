@@ -2,13 +2,16 @@ body {
     font-family: Raleway;
     margin-bottom:50px;
 }
+
 a:hover {
     text-decoration: none;
 }
+
 .panel-body {
     background-color: #3e3f3a;
     height: 170px;
 }
+
 .panel-body h2 {
     color: #fff;
 }
@@ -19,12 +22,8 @@ a:hover {
     margin: auto;
 }
 
-.navbar {
-    border-radius: 0;
-}
-
-.sidenav {
-     border-right: 1px solid #ddd;
+.active {
+    font-weight: bold;
 }
 
 footer {
@@ -35,6 +34,7 @@ footer {
     border-top: 1px solid #ddd;
     text-align: center;
 }
+
 footer p {
     margin: 10px auto;
 }
@@ -71,7 +71,7 @@ footer p {
     }
 
     .form {
-        padding-top: 100px;
+        padding-top: 60px;
         padding-bottom: 100px;
         padding-left: 20px;
         padding-right: 0;

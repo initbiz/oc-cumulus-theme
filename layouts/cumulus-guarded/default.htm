@@ -21,17 +21,7 @@ code = "example-menu"
 <body>
     {% partial 'flashbox' %}
     {% partial 'site/nav' %}
-    <!-- Page Content -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3 sidenav">
-                {% component 'staticMenu' %}
-            </div>
-            <div class="col-md-9">
-                {% page %}
-            </div>
-        </div>
-    </div>
+    {% page %}
     {% partial 'site/footer' %}
     {% partial 'html/footer-scripts' %}
 </body>

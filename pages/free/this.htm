@@ -9,4 +9,13 @@ is_hidden = 0
             Free this
         </div>
     </div>
+    
+    {% if canEnterFeature('initbiz.cumulusdemo.paid_feature') %}
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            Paid this feature
+        </div>
+    </div>
+    {% endif %}
+
 </div>

@@ -9,7 +9,8 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-            cumulusFeatures: '0'
+            cumulusFeature-initbiz.cumulusdemo.free_feature: '0'
+            cumulusFeature-initbiz.cumulusdemo.paid_feature: '0'
     -
         title: 'Cluster dashboard'
         type: cumulus-page
@@ -19,7 +20,8 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-            cumulusFeatures: '0'
+            cumulusFeature-initbiz.cumulusdemo.free_feature: '0'
+            cumulusFeature-initbiz.cumulusdemo.paid_feature: '0'
     -
         title: This
         type: cumulus-page
@@ -29,7 +31,8 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-            cumulusFeatures: initbiz.cumulusdemo.free_feature
+            cumulusFeature-initbiz.cumulusdemo.free_feature: '1'
+            cumulusFeature-initbiz.cumulusdemo.paid_feature: '0'
     -
         title: That
         type: cumulus-page
@@ -39,7 +42,8 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-            cumulusFeatures: initbiz.cumulusdemo.free_feature
+            cumulusFeature-initbiz.cumulusdemo.free_feature: '1'
+            cumulusFeature-initbiz.cumulusdemo.paid_feature: '0'
     -
         title: 'Awesome stuff'
         type: cumulus-page
@@ -49,4 +53,5 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-            cumulusFeatures: initbiz.cumulusdemo.paid_feature
+            cumulusFeature-initbiz.cumulusdemo.free_feature: '0'
+            cumulusFeature-initbiz.cumulusdemo.paid_feature: '1'

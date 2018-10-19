@@ -12,3 +12,4 @@ require:
     - RainLab.Userplus
     - RainLab.Translate
     - Initbiz.Cumuluscore
+    - Initbiz.CumulusDemo

@@ -4,3 +4,4 @@
 1.0.3: Small Bootstrap 4 fixes (thanks to @Adrion)
 1.0.4: Removed clusterDashboard component (it was moved to cumulusPlus plugin)
 1.0.5: !!! Cumulus 2.0.0 compatibility. Read CumulusCore upgrade guide.
+1.0.6: Added RainLab.Pages as a dependency

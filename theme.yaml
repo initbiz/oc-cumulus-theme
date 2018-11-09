@@ -11,5 +11,6 @@ require:
     - RainLab.Location
     - RainLab.Userplus
     - RainLab.Translate
-    - Initbiz.Cumuluscore
+    - RainLab.Pages
+    - Initbiz.CumulusCore
     - Initbiz.CumulusDemo

@@ -13,4 +13,5 @@ require:
     - RainLab.Translate
     - RainLab.Pages
     - Initbiz.CumulusCore
+    - Initbiz.InitDry
     - Initbiz.CumulusDemo

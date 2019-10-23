@@ -1,7 +1,16 @@
 name: 'Cumulus Demo'
-description: 'Theme cumulus demo'
+description: 'Theme using Cumulus plugin'
 author: InIT.biz
-homepage: 'https://init.biz'
-code: ''
+homepage: 'https://www.init.biz'
+code: 'cumulus'
 translate: config/lang.yaml
-
+require:
+    - RainLab.Notify
+    - RainLab.User
+    - RainLab.Location
+    - RainLab.Userplus
+    - RainLab.Translate
+    - RainLab.Pages
+    - Initbiz.InitDry
+    - Initbiz.CumulusCore
+    - Initbiz.CumulusDemo

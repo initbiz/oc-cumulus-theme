@@ -2,15 +2,13 @@ title = "Cluster dashboard"
 url = "/:cluster/dashboard"
 layout = "cumulus-guarded/default"
 is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+[clusterDashboard]
+clusterUniq = "{{ :cluster }}"
+injectassets = 1
 ==
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-10 offset-md-1">
-            <h2>
-                {% if user.name %}
-                    {{'dashboard.welcome_message' |_}}{{", " ~ user.name}}!
-                {% endif %}
-            </h2>
-        </div>
-    </div>
-</div>
+{% component 'clusterDashboard' %}

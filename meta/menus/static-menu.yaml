@@ -1,0 +1,65 @@
+name: static-menu
+items:
+    -
+        title: Dashboard
+        nesting: ''
+        type: cumulus-page
+        url: ''
+        code: dashboard
+        reference: ''
+        cmsPage: system/cluster-dashboard
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            cumulusFeature-initbiz.cumulussubscriptions.manage_subscription: '0'
+            cumulusFeature-initbiz.cumulusplus.cluster_settings: '0'
+            cumulusFeature-initbiz.cumulusdemo.basic.dashboard: '1'
+            cumulusFeature-initbiz.cumulusdemo.advanced.dashboard: '0'
+            cumulusFeature-initbiz.cumulusdemo.basic.todo: '0'
+            cumulusFeature-initbiz.cumulusdemo.basic.gallery: '0'
+            cumulusFeature-initbiz.cumulusdemo.advanced.todo: '0'
+            cumulusFeature-initbiz.cumulusdemo.advanced.gallery: '0'
+    -
+        title: Gallery
+        nesting: ''
+        type: cumulus-page
+        url: ''
+        code: gallery
+        reference: ''
+        cmsPage: system/galery
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            cumulusFeature-initbiz.cumulussubscriptions.manage_subscription: '0'
+            cumulusFeature-initbiz.cumulusplus.cluster_settings: '0'
+            cumulusFeature-initbiz.cumulusdemo.basic.dashboard: '0'
+            cumulusFeature-initbiz.cumulusdemo.advanced.dashboard: '0'
+            cumulusFeature-initbiz.cumulusdemo.basic.todo: '0'
+            cumulusFeature-initbiz.cumulusdemo.basic.gallery: '1'
+            cumulusFeature-initbiz.cumulusdemo.advanced.todo: '0'
+            cumulusFeature-initbiz.cumulusdemo.advanced.gallery: '0'
+    -
+        title: Todo
+        nesting: ''
+        type: cumulus-page
+        url: ''
+        code: todo
+        reference: ''
+        cmsPage: system/todo
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            cumulusFeature-initbiz.cumulussubscriptions.manage_subscription: '0'
+            cumulusFeature-initbiz.cumulusplus.cluster_settings: '0'
+            cumulusFeature-initbiz.cumulusdemo.basic.dashboard: '0'
+            cumulusFeature-initbiz.cumulusdemo.advanced.dashboard: '0'
+            cumulusFeature-initbiz.cumulusdemo.basic.todo: '1'
+            cumulusFeature-initbiz.cumulusdemo.basic.gallery: '0'
+            cumulusFeature-initbiz.cumulusdemo.advanced.todo: '0'
+            cumulusFeature-initbiz.cumulusdemo.advanced.gallery: '0'

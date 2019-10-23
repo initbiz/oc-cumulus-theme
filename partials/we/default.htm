@@ -1,0 +1,190 @@
+<div class="card">
+    <div class="card-body">
+        <h4>{{ 'initbiz.cumulusplus::lang.settings.heading' | trans }}</h4>
+        <hr>
+        {{ form_ajax(__SELF__~'::onUpdate', { files: 'true' }) }}
+        <div id="cumulus-settings" class="cumulus-settings">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <label class="btn btn-primary btn-file">
+                            {{ 'initbiz.cumulusplus::lang.settings.upload_new_logo' | trans }}
+                            <input style="width: 0px;height: 0px;overflow: hidden;" type="file" name="logo" accept="image/*" id="image-input">
+                        </label>
+                    </span>
+                    <input type="text" class="form-control" style="display: none" readonly>
+                </div>
+                <img id='img-upload' src="{{cluster.logo.getThumb(200,200)}}">
+            </div>
+            <div class="form-group name-line">
+                <label for="cluster_name">
+                    {{ 'initbiz.cumulusplus::lang.settings.cluster_name' | trans }}
+                </label>
+                <input
+                    id="cluster_name"
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    value="{{ cluster.name }}"
+                    >
+            </div>
+
+            <div class="form-group username">
+                <label for="cluster_username">
+                    {{ 'initbiz.cumulusplus::lang.settings.cluster_username' | trans }}
+                </label>
+                <input
+                    id="cluster_username"
+                    type="text"
+                    name="username"
+                    class="form-control"
+                    value="{{ cluster.username }}"
+                    data-track-input="1000"
+                    data-request="onCheckUsernameUniqueness"
+                    >
+                <div id="username-unique-status"></div>
+            </div>
+
+            <div class="form-group tax-number">
+                <label for="cluster_tax_number">
+                    {{ 'initbiz.cumulusplus::lang.settings.cluster_tax_number' | trans }}
+                </label>
+                <input
+                    id="cluster_tax_number"
+                    type="text"
+                    name="tax_number"
+                    class="form-control"
+                    value="{{ cluster.tax_number }}"
+                    >
+            </div>
+
+            <div class="form-group thoroughfare">
+                <label for="cluster_thoroughfare">
+                    {{ 'initbiz.cumulusplus::lang.settings.cluster_thoroughfare' | trans }}
+                </label>
+                <input
+                    id="cluster_thoroughfare"
+                    type="text"
+                    name="thoroughfare"
+                    class="form-control"
+                    value="{{ cluster.thoroughfare }}"
+                    >
+            </div>
+
+            <div class="form-group postal-code">
+                <label for="cluster_postal_code">
+                    {{ 'initbiz.cumulusplus::lang.settings.cluster_postal_code' | trans }}
+                </label>
+                <input
+                    id="cluster_postal_code"
+                    type="text"
+                    name="postal_code"
+                    class="form-control"
+                    value="{{ cluster.postal_code }}"
+                    >
+            </div>
+
+            <div class="form-group city">
+                <label for="cluster_city">
+                    {{ 'initbiz.cumulusplus::lang.settings.cluster_city' | trans }}
+                </label>
+                <input
+                    id="cluster_city"
+                    type="text"
+                    name="city"
+                    class="form-control"
+                    value="{{ cluster.city }}"
+                    >
+            </div>
+
+            <div class="form-group country">
+                <label for="cluster_country">
+                    {{ 'initbiz.cumulusplus::lang.settings.cluster_country' | trans }}
+                </label>
+                <select
+                    id="cluster_country"
+                    name="country_id"
+                    class="form-control"
+                    >
+                    {% for code,name in countries %}
+                    <option value="{{code}}" {{ (code == cluster.country.id)?'selected':'' }}>{{name}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group telephone">
+                <label for="cluster_phone">
+                    {{ 'initbiz.cumulusplus::lang.settings.cluster_phone' | trans }}
+                </label>
+                <input
+                    id="cluster_phone"
+                    type="text"
+                    name="phone"
+                    class="form-control"
+                    value="{{ cluster.phone }}"
+                    >
+            </div>
+
+            <div class="form-group email">
+                <label for="cluster_email">
+                    {{ 'initbiz.cumulusplus::lang.settings.cluster_email' | trans }}
+                </label>
+                <input
+                    id="cluster_email"
+                    type="text"
+                    name="email"
+                    class="form-control"
+                    value="{{ cluster.email }}"
+                    >
+            </div>
+
+            <div class="form-group account-no">
+                <label for="cluster_account_number">
+                    {{ 'initbiz.cumulusplus::lang.settings.cluster_account_number' | trans }}
+                </label>
+                <input
+                    id="cluster_account_number"
+                    type="text"
+                    name="account_number"
+                    class="form-control"
+                    value="{{ cluster.account_number }}"
+                    >
+            </div>
+
+            <div class="form-group description">
+                <label for="cluster_description">
+                    {{ 'initbiz.cumulusplus::lang.settings.cluster_description' | trans }}
+                </label>
+                <textarea
+                    id="cluster_description"
+                    name="description"
+                    class="form-control"
+                    >{{ cluster.description }}</textarea>
+            </div>
+
+            <input id="cluster_remove_logo" type="hidden" value="0" name="remove_logo">
+
+            <button type="submit" class="btn btn-primary" id="update-cluster-details-submit">
+                {{ 'initbiz.cumulusplus::lang.settings.save_button' | trans }}
+            </button>
+        </div>
+        {{ form_close() }}
+    </div>
+</div>
+{% put scripts %}
+<script>
+$(document).ready( function() {
+    $("#image-input").change(function(){
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#img-upload').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(this.files[0]);
+        }
+    }); 	
+});
+</script>
+{% endput %}

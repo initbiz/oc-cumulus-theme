@@ -1,0 +1,26 @@
+[viewBag]
+==
+{% put styles %}
+  <link rel="stylesheet" href="/plugins/initbiz/cumulusplus/assets/css/settings.css">
+{% endput %}
+{% for userCluster in userClusters %}
+    <div class="card">
+        <div class="border-secondary">
+            <a href="{{ userCluster.pageUrl }}">
+                <div class="card-header">
+                    <h2>{{ userCluster.name }}</h2>
+                </div>    
+                {% if userCluster.logo.path %}
+                <div class="card-body">
+                    <img src="{{ userCluster.logo.path   }}" alt="" class="img-fluid">
+                </div>
+                {% else %}
+                {% endif %}
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+    {% put scripts %}
+      <link rel="stylesheet" href="/plugins/initbiz/cumulusplus/assets/node_modules/masonry-layout/dist/masonry.pkgd.min.js">
+      <link rel="stylesheet" href="/plugins/initbiz/cumulusplus/assets/js/settings.js">
+    {% endput %}

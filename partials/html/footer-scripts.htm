@@ -1,15 +1,14 @@
 description = "Scripts partial loaded in the bottom part of page"
 ==
 
+{% scripts %}
     {% set scriptfiles = [
          '@framework',
          '@framework.extras',
-         'assets/js/bootstrap.js',
          'assets/js/popper.js',
-         'assets/js/custom.js'
+         'assets/js/bootstrap.js',
+         'assets/js/custom.js',
     ] %}
 
     {# Combined script files from scriptfiles array #}
     <script src="{{ scriptfiles |theme}}"> </script>
-
-    {% scripts %}

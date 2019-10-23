@@ -2,16 +2,16 @@ description = "Default layout for pages that need being logged in and access to 
 
 [session]
 security = "user"
-redirect = "public/login"
+redirect = "system/choose-cluster"
 
 [cumulusGuard]
-clusterSlug = "{{ :cluster }}"
+clusterUniq = "{{ :cluster }}"
 
 [localePicker]
 forceUrl = 0
 
 [staticMenu]
-code = "example-menu"
+code = "static-menu"
 ==
 <!DOCTYPE html>
 <html lang="{{activeLocale}}">

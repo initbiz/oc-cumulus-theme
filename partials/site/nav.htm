@@ -1,6 +1,6 @@
-
+[viewBag]
 ==
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
     <a class="navbar-brand" href="{{'system/choose-cluster'|page}}">
         {% if this.theme.website_logo %}
@@ -23,8 +23,8 @@
             <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbar2toggle">
-        {% component 'staticMenu' %}
+    <div class="collapse navbar-collapse">
+    {% component 'staticMenu' %}
         
         <ul class="navbar-nav ml-auto">
             {% if user %}
@@ -33,6 +33,9 @@
                     <div class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="{{'system/profile' |page}}">
                             {{'nav.profile_page' |_}}
+                        </a>
+                        <a class="dropdown-item" href="{{'system/settings' |page}}">
+                            {{'nav.settings' |_}}
                         </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#" data-request="onLogout" data-request-data="redirect: '{{'public/login'|page}}'">

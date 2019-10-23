@@ -1,0 +1,33 @@
+title = "Create order"
+url = "/:cluster/create-order"
+layout = "cumulus-guarded/default"
+is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+[createOrder]
+clusterUniq = "{{ :cluster }}"
+==
+<div class="container">
+    <div class="row mt-5">
+            {% component 'createOrder' %}
+        <div class="col-md-3">
+            {% if not canEnterFeature('initbiz.cumulusdemo.advanced.todo') %}
+                <div class="alert alert-dismissible alert-info mt-3">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    {% content 'demo-free' %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% put scripts %}
+<script>
+$(window).load(function()
+{
+    $('#modal-upgrade').modal('show');
+});
+</script>
+{% endput %}

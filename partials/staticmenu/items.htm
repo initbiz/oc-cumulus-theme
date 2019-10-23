@@ -1,11 +1,13 @@
+[viewBag]
+==
 {% for item in items if not item.viewBag.isHidden %}
     <li class="nav-item {{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'active' : '' }} {{ item.viewBag.cssClass }}">
         {% if item.url %}
             <a class="nav-link" href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
-                {{ item.title }}
+                {{ ('nav.' ~ item.code)|_ }}
             </a>
         {% else %}
-            <span>{{ item.title }}</span>
+            <span>{{ ('nav.' ~ item.code)|_ }}</span>
         {% endif %}
 
         {% if item.items %}

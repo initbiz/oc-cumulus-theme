@@ -1,7 +1,120 @@
-@charset "UTF-8";
+#flashbox {
+    z-index: 1000;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+}
 
-// Cumulus additions
-@import "theme/cumulus";
+#flashbox .content {
+    opacity: 0.90;
+    width: 60%;
+    margin: auto;
+}
 
-// Custom Styling
-@import "theme/custom";
+#login-container, #register-container {
+    margin-top:100px;
+    align-items: center;
+
+    .fa-cloud {
+        padding-right: 25px;
+        color: #2980b9;
+        font-size: 200px;
+    }
+
+    .logo img {
+        max-width: 300px;
+    }
+
+    .brand h1 {
+        letter-spacing: 8px;
+    }
+
+    .form {
+        padding-top: 60px;
+        padding-bottom: 100px;
+        padding-left: 20px;
+        padding-right: 0;
+        height: 300px;
+        margin: 0 20px;
+        border-left: 1px solid rgba(41, 128, 185, 0.17);
+    }
+
+    input {
+        color: rgba(41, 128, 185, 0.5);
+        font-size: 15px;
+        border: none;
+        border-radius: 0;
+        height: 60px;
+        width: 300px;
+    }
+
+    input:focus {
+        outline: none !important;
+        border: none;
+        border-radius: 0;
+    }
+
+    input::-webkit-input-placeholder {
+        color: rgba(41, 128, 185, 0.5);
+        font-size: 20px;
+    }
+
+    .signinButton {
+        padding-top: 30px;
+        cursor: pointer;
+        color: rgba(41, 128, 185, 0.2);
+        font-size: 200px;
+        font-weight: 100;
+    }
+
+    .signinButton:hover {
+        color: rgba(41, 128, 185, 0.5);
+    }
+
+    /* Change the white to any color ;) */
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+
+    .stripe-loading-indicator .stripe, .stripe-loading-indicator .stripe-loaded {
+        background: #2980b9;
+    }
+
+    .alert {
+        border-radius: 0;
+        text-align: center;
+        font-weight: bold;
+    }
+
+}
+
+// Settings
+#img-upload{
+    width: 100%;
+}
+
+#content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#graph {
+	width: 800px;
+}
+.close{
+    color: #212529;
+}
+.alert-error {
+  color: #78281f;
+  background-color: #fadbd8;
+  border-color: #f8cdc8;
+}
+
+.alert-error hr {
+  border-top-color: #f5b8b1;
+}
+
+.alert-error .alert-link {
+  color: #4f1a15;
+}

@@ -1,9 +1,0 @@
-1.0.0: First version of Cumulus theme (03.01.2018)
-1.0.1: Moved to Bootstrap 4 (Bootswatch/Litera) and Font Awesome 5
-1.0.2: FontAwesome included in project, faster loading and some fixes
-1.0.3: Small Bootstrap 4 fixes (thanks to @Adrion)
-1.0.4: Removed clusterDashboard component (it was moved to cumulusPlus plugin)
-1.0.5: !!! Cumulus 2.0.0 compatibility. Read CumulusCore upgrade guide.
-1.0.6: Added RainLab.Pages as a dependency
-1.0.7: Fixed registering clusters features
-1.0.8: Added InITDry as a dependency

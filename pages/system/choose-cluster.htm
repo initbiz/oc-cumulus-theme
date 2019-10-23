@@ -1,13 +1,21 @@
-title = "Choose cluster"
+title = "choose-cluster"
 url = "/choose-cluster"
 layout = "session-guarded/default"
 is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
 
-[clustersList cClustersList]
+[clustersList]
 clusterDashboardPage = "system/cluster-dashboard"
 ==
-<div class="text-center">
-    <h1>{{'choosecluster.header' |_}}</h1>
-    <hr>
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row card-columns grid">
+            <div class="grid-sizer"></div>
+            <div class="gutter-sizer"></div>
+            {% component 'clustersList' %}
+        </div>
+    </div>
 </div>
-{% component 'cClustersList' %}

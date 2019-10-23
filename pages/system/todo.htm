@@ -1,0 +1,28 @@
+title = "todo"
+url = "/:cluster/todo"
+layout = "cumulus-guarded/default"
+is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+[todo]
+
+[alternateHrefLangElements]
+==
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+            {% component 'todo' %}
+        </div>
+        <div class="col-md-3">
+            {% if not canEnterFeature('initbiz.cumulusdemo.advanced.todo') %}
+                <div class="alert alert-dismissible alert-info mt-3">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    {% content 'upgrade-plan' %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -7,6 +7,26 @@ redirect = "public/login"
 [localePicker]
 forceUrl = 0
 ==
+<?php
+    function onInit() {
+        $pluginManager = System\Classes\PluginManager::instance();
+        if($pluginManager->hasPlugin('Initbiz.CumulusAnnouncements'));
+        {
+            $this->addComponent(
+                'Initbiz\CumulusAnnouncements\Components\UserAnnouncements', 'userAnnouncements', 
+                    [
+                        'announcementPage' => "system/announcements",
+                        'announcementsPage' => "system/announcements",
+                        'announcementRedirectPage' => "system/announcements",
+                        'onlyUnread' => '1'
+                    ]
+            );
+        }
+
+        $this['lastCluster'] = \Initbiz\CumulusCore\Classes\Helpers::getCluster();
+    }
+?>
+==
 <!DOCTYPE html>
 <html lang="{{activeLocale}}">
 <head>

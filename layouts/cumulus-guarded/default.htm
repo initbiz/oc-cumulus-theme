@@ -13,6 +13,24 @@ forceUrl = 0
 [staticMenu]
 code = "static-menu"
 ==
+<?php
+function onInit() {
+        $pluginManager = System\Classes\PluginManager::instance();
+        if($pluginManager->hasPlugin('Initbiz.CumulusAnnnouncements'));
+        {
+            $this->addComponent(
+                'Initbiz\CumulusAnnouncements\Components\UserAnnouncements', 'userAnnouncementsList', 
+                    [
+                        'announcementPage' => "system/announcements",
+                        'announcementsPage' => "system/announcements",
+                        'announcementRedirectPage' => "system/announcements",
+                        'onlyUnread' => '1'
+                    ]
+            );
+        }
+    }
+?>
+==
 <!DOCTYPE html>
 <html lang="{{activeLocale}}">
 <head>

@@ -1,0 +1,44 @@
+title = "announcements"
+url = "/announcements/:id?"
+layout = "session-guarded/default"
+is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+==
+<?php
+    function onInit() {
+        $pluginManager = System\Classes\PluginManager::instance();
+        if($pluginManager->hasPlugin('Initbiz.CumulusAnnouncements'));
+        {
+            $this->addComponent(
+                'Initbiz\CumulusAnnouncements\Components\UserAnnouncements', 'userAnnouncementsList', 
+                    [
+                        'announcementPage' => "system/announcements",
+                        'announcementsPage' => "system/announcements",
+                        'announcementRedirectPage' => "system/announcements",
+                        'onlyUnread' => '0'
+                    ]
+            );
+            $this->addComponent(
+                'Initbiz\CumulusAnnouncements\Components\AnnouncementDetails', 'announcementDetails', 
+                    [
+                        'announcementId' => "{{ :id }}",
+                        'announcementsPage' => "system/announcements",
+                        'announcementRedirectPage' => "system/announcements"
+                    ]
+            );
+        }
+    }
+?>
+==
+{% if hasPlugin('Initbiz.CumulusAnnouncements') %}
+<div class="container">
+    <div class="row mt-5">
+        {% component 'userAnnouncementsList' %}
+        {% component 'announcementDetails' %}
+    </div>
+{% endif %}
+</div>

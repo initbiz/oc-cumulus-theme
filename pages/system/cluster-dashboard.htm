@@ -7,8 +7,20 @@ hide_crumb = 0
 remove_crumb_trail = 0
 crumb_disabled = 0
 
-[clusterDashboard]
-clusterUniq = "{{ :cluster }}"
-injectassets = 1
 ==
-{% component 'clusterDashboard' %}
+function onInit() {
+    $pluginManager = System\Classes\PluginManager::instance();
+    if($pluginManager->hasPlugin('Initbiz.CumulusPlus') === true)
+    {
+        $this->addComponent('Initbiz\CumulusPlus\Components\ClusterDashboard', 'clusterDashboard', 
+        [
+            'clusterUniq' => "{{ :cluster }}",
+            'injectassets' => '1',
+        ]
+        );
+    }
+}
+==
+{% if hasPlugin('Initbiz.CumulusPlus') %}
+    {% component 'clusterDashboard' %}
+{% endif %}

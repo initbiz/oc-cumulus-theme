@@ -10,7 +10,7 @@ forceUrl = 0
 <?php
     function onInit() {
         $pluginManager = System\Classes\PluginManager::instance();
-        if($pluginManager->hasPlugin('Initbiz.CumulusAnnouncements'));
+        if($pluginManager->hasPlugin('Initbiz.CumulusAnnouncements'))
         {
             $this->addComponent(
                 'Initbiz\CumulusAnnouncements\Components\UserAnnouncements', 'userAnnouncements', 

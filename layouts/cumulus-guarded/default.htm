@@ -16,7 +16,7 @@ code = "static-menu"
 <?php
 function onInit() {
         $pluginManager = System\Classes\PluginManager::instance();
-        if($pluginManager->hasPlugin('Initbiz.CumulusAnnnouncements'));
+        if($pluginManager->hasPlugin('Initbiz.CumulusAnnnouncements'))
         {
             $this->addComponent(
                 'Initbiz\CumulusAnnouncements\Components\UserAnnouncements', 'userAnnouncements', 
